@@ -9,6 +9,8 @@
 
 Full-stack app for manag personal budget. Allows you to enter new budgets and enter expenses divided into categories.
 
+&nbsp;
+
 ## Features
 
 - Adding budgets
@@ -16,9 +18,13 @@ Full-stack app for manag personal budget. Allows you to enter new budgets and en
 - Statistics on expense categories
 - Full responsive version
 
+&nbsp;
+
 ## Demo
 
-See the live version of [Vercel](https://vercel.com/dashboard).
+See the live version of [Vercel](https://financial-app-react.vercel.app/).
+
+&nbsp;
 
 ## Tech Stack
 
@@ -29,6 +35,8 @@ See the live version of [Vercel](https://vercel.com/dashboard).
 - HTML
 
 **Server:**
+
+&nbsp;
 
 ## Installation
 
@@ -50,3 +58,9 @@ You will need the following things properly installed on your computer.
 
 - `npm run dev`
 - Visit your app at [http://localhost:5173](http://localhost:5173).
+
+&nbsp;
+
+## Special thanks
+
+Thanks to our Mentors from [nowoczesnyjunior.pl](https://nowoczesnyjunior.pl/)
