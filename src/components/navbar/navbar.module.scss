@@ -1,0 +1,69 @@
+@import "@styles/common.scss";
+
+.wrapper {
+  background-color: $primary-color;
+  border-radius: 8px 8px 0 0;
+  padding: $space-sm 0;
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  @include screen-size("md") {
+    border-radius: 0;
+    padding: $space-md $space-xl;
+
+    bottom: auto;
+    top: 0;
+  }
+}
+
+.navBar {
+  margin: 0 auto;
+  max-width: 1024px;
+
+  @include screen-size("md") {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  * {
+    transition: $transition;
+  }
+
+  @include screen-size("md") {
+    gap: $space-xl;
+  }
+}
+
+.navLink {
+  align-items: center;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xxs;
+  text-decoration: none;
+
+  svg {
+    path {
+      stroke: $light-color;
+    }
+  }
+
+  &:hover {
+    color: $secondary-color;
+    path {
+      stroke: $secondary-color;
+    }
+  }
+}

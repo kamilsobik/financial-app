@@ -1,0 +1,11 @@
+@import "@styles/common.scss";
+
+.logo {
+  display: none;
+
+  @include screen-size("md") {
+    color: $light-color;
+    display: block;
+    font-size: 1.5rem;
+  }
+}
