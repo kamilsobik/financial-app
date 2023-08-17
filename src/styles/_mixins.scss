@@ -1,0 +1,16 @@
+@mixin screen-size($size) {
+  $breakpoints: (
+    'sm': '(min-width: 576px)',
+    'md': '(min-width: 768px)',
+    'lg': '(min-width: 992px)',
+    'xl': '(min-width: 1200px)',
+  );
+
+  @if map-has-key($breakpoints, $size) {
+    @media screen and #{map-get($breakpoints, $size)} {
+      @content;
+    }
+  } @else {
+    @error "'#{$size}' is invalid breakpoint";
+  }
+}

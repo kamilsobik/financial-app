@@ -1,0 +1,6 @@
+@use "scss-reset/reset";
+@import "./common.scss";
+
+body {
+  background-color: $light-color;
+}

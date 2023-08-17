@@ -1,10 +1,10 @@
-import "./App.css";
+import "@styles/global.scss";
 import Navbar from "./components/navbar";
 
 function App() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <h1>Financial APP</h1>
     </>
   );
