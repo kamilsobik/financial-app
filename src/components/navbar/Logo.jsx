@@ -1,5 +1,10 @@
 import styles from "./logo.module.scss";
+import { ReactComponent as LogoSvg } from "@images/logo.svg";
 
 export default function Logo() {
-  return <h1 className={styles.logo}>BudgetBuddy</h1>;
+  return (
+  <a href="/" className={styles.logoLink}>
+    <LogoSvg />;
+  </a>
+  )
 }

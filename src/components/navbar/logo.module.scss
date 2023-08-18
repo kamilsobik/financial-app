@@ -1,11 +1,19 @@
 @import "@styles/common.scss";
 
-.logo {
+.logoLink {
   display: none;
+  padding: 0;
 
   @include screen-size("md") {
-    color: $light-color;
     display: block;
-    font-size: 1.5rem;
+    height: 2rem;
+
+    svg {
+      height: 100%;
+
+      path {
+        fill: $light-color;
+      }
+    }
   }
 }
