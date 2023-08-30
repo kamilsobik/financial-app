@@ -14,8 +14,8 @@ const SharedButton = ({
     backgroundColor: backgroundColor || "bg-blue-500",
     hoverColor: hoverColor || "hover:bg-blue-700",
     color: textColor || "text-white",
-    fontSize: fontSize || "text-base",
-    width: width || "w-auto",
+    fontSize: fontSize || "text-sm lg:text-xl",
+    width: width || "w-40 lg:w-96",
     height: height || "h-auto",
   };
 
