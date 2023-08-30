@@ -9,6 +9,7 @@ const SharedButton = ({
   fontSize,
   width,
   height,
+  type,
 }) => {
   const buttonStyle = {
     backgroundColor: backgroundColor || "bg-blue-500",
@@ -17,10 +18,12 @@ const SharedButton = ({
     fontSize: fontSize || "text-sm lg:text-xl",
     width: width || "w-40 lg:w-96",
     height: height || "h-auto",
+    type: type || "button",
   };
 
   return (
     <button
+      type={type}
       className={`font-bold py-2 px-4 rounded ${buttonStyle.backgroundColor} ${buttonStyle.hoverColor} ${buttonStyle.color} ${buttonStyle.fontSize} ${buttonStyle.width} ${buttonStyle.height}`}
       onClick={onClick}
     >
@@ -38,6 +41,7 @@ SharedButton.propTypes = {
   fontSize: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default SharedButton;
