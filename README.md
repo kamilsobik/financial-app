@@ -31,7 +31,7 @@ See the live version of [Vercel](https://financial-app-react.vercel.app/).
 **Client:**
 
 - React
-- SCSS
+- Tailwind
 - HTML
 
 **Server:**
