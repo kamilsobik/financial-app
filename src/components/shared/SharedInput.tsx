@@ -1,7 +1,17 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
-const SharedInput = ({
+interface SharedInputProps {
+  placeholder?: string;
+  onChange?: (value: string) => void;
+  backgroundColor?: string;
+  textColor?: string;
+  fontSize?: string;
+  width?: string;
+  height?: string;
+  value?: string;
+}
+
+const SharedInput: React.FC<SharedInputProps> = ({
   placeholder,
   onChange,
   backgroundColor,
@@ -11,7 +21,7 @@ const SharedInput = ({
   height,
   value,
 }) => {
-  const [inputValue, setInputValue] = useState(value || "");
+  const [inputValue, setInputValue] = useState<string>(value || "");
 
   const inputStyle = {
     backgroundColor: backgroundColor || "bg-blue-300",
@@ -21,7 +31,7 @@ const SharedInput = ({
     height: height || "h-auto",
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setInputValue(newValue);
 
@@ -39,17 +49,6 @@ const SharedInput = ({
       value={inputValue}
     />
   );
-};
-
-SharedInput.propTypes = {
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  fontSize: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  value: PropTypes.string,
 };
 
 export default SharedInput;

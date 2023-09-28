@@ -1,6 +1,18 @@
-import PropTypes from "prop-types";
+import React from "react";
 
-const SharedButton = ({
+interface SharedButtonProps {
+  label: string;
+  onClick: () => void;
+  backgroundColor?: string;
+  hoverColor?: string;
+  textColor?: string;
+  fontSize?: string;
+  width?: string;
+  height?: string;
+  type?: "button" | "submit" | "reset";
+}
+
+const SharedButton: React.FC<SharedButtonProps> = ({
   label,
   onClick,
   backgroundColor,
@@ -30,18 +42,6 @@ const SharedButton = ({
       {label}
     </button>
   );
-};
-
-SharedButton.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  backgroundColor: PropTypes.string,
-  hoverColor: PropTypes.string,
-  textColor: PropTypes.string,
-  fontSize: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  type: PropTypes.string,
 };
 
 export default SharedButton;
