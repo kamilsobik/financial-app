@@ -30,12 +30,11 @@ const SharedButton: React.FC<SharedButtonProps> = ({
     fontSize: fontSize || "text-sm lg:text-xl",
     width: width || "w-40 lg:w-96",
     height: height || "h-auto",
-    type: type || "button",
   };
 
   return (
     <button
-      type={type}
+      type={type || "button"}
       className={`font-bold py-2 px-4 rounded ${buttonStyle.backgroundColor} ${buttonStyle.hoverColor} ${buttonStyle.color} ${buttonStyle.fontSize} ${buttonStyle.width} ${buttonStyle.height}`}
       onClick={onClick}
     >
